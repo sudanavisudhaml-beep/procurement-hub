@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Node (kalau nanti pakai tooling)
+node_modules/
+npm-debug.log*
+
+# Firebase — jangan commit kredensial admin / service account
+.firebase/
+firebase-debug.log
+*serviceAccount*.json
+.env
+.env.local
+
+# Catatan: firebaseConfig (apiKey publik) untuk web BOLEH di-commit —
+# itu memang dirancang publik. Yang TIDAK boleh: service account key
+# (admin SDK) dan file .env berisi secret.

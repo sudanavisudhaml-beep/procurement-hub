@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astra Procurement Hub — Referensi Vendor Antar Business Unit</title>
+<meta name="description" content="Platform pertukaran informasi vendor antar Business Unit di lingkungan Astra. Referensi, bukan penetapan standar.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ====================== TOP BAR ====================== -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <img class="logo" src="assets/astra-logo.png" data-fallback="astra" alt="Astra">
+      <div class="divider"></div>
+      <div>
+        <div class="t1">Procurement Hub</div>
+        <div class="t2">Referensi Vendor Antar Business Unit</div>
+      </div>
+    </div>
+    <nav class="topnav">
+      <button class="navbtn active" data-go="home">Beranda</button>
+      <button class="navbtn" data-go="security">Pengamanan</button>
+      <button class="navbtn" data-go="travel">Travel</button>
+      <button class="contribbtn" onclick="sendPrompt('Saya ingin berbagi referensi vendor yang pernah digunakan BU saya ke Procurement Hub. Bantu saya menyiapkan datanya.')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+        Bagikan Referensi
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ====================== HOME ====================== -->
+<div class="view active" id="view-home">
+  <section class="hero">
+    <div class="sky">
+      <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+    </div>
+    <svg class="swoosh" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 205 C 220 120, 470 55, 795 30 C 480 95, 235 150, 30 215 Z" fill="rgba(255,255,255,0.16)"/>
+      <path d="M120 195 C 320 130, 540 80, 760 60 C 545 110, 330 158, 150 205 Z" fill="rgba(149,182,223,0.30)"/>
+    </svg>
+    <svg class="swoosh lower" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M5 205 C 220 120, 470 55, 795 30 C 480 95, 235 150, 30 215 Z" fill="rgba(255,255,255,0.10)"/>
+    </svg>
+    <div class="wrap">
+      <div class="eyebrow"><span class="ln"></span>Diinisiasi oleh Astra International · Head Office</div>
+      <h1 class="herotitle">Saling berbagi referensi vendor, <span class="soft">antar Business Unit Astra.</span></h1>
+      <p class="herosub">Platform pertukaran informasi pengadaan untuk Grup Astra. Setiap Business Unit dapat menelusuri dan membagikan vendor yang pernah mereka gunakan — memperkaya pilihan satu sama lain. Keputusan pengadaan tetap sepenuhnya di tangan masing-masing BU.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" data-go="security">Telusuri referensi
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <button class="btn-ghost" onclick="sendPrompt('Saya ingin berbagi referensi vendor yang pernah digunakan BU saya ke Procurement Hub. Bantu saya menyiapkan datanya.')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+          Bagikan referensi BU Anda
+        </button>
+      </div>
+      <div class="herostats">
+        <div class="hstat"><div class="n tnum">2</div><div class="l">Kategori referensi tersedia</div></div>
+        <div class="hstat"><div class="n tnum">10</div><div class="l">Vendor terdokumentasi</div></div>
+        <div class="hstat"><div class="n tnum">7</div><div class="l">Lini bisnis dapat berkontribusi</div></div>
+        <div class="hstat"><div class="n">Terbuka</div><div class="l">Bagi seluruh BU Astra</div></div>
+      </div>
+    </div>
+    <div class="heroband">
+      <div class="wrap">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg></span>
+        <span class="txt"><b>Catatan penting:</b> Platform ini adalah referensi & pertukaran informasi — <b>bukan</b> daftar vendor resmi, sertifikasi, atau penetapan standar oleh Astra. Inklusi sebuah vendor tidak berarti rekomendasi atau jaminan. Pemilihan vendor mengikuti proses pengadaan masing-masing BU.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="block">
+    <div class="wrap">
+      <div class="secthead">
+        <div class="kick">Cara kerja platform</div>
+        <h2>Tiga peran, satu khazanah bersama</h2>
+        <p>Dirancang sebagai pertukaran dua arah. HO menginisiasi dan menjaga wadahnya; setiap BU mengisi dan memanfaatkannya.</p>
+      </div>
+      <div class="how">
+        <div class="how-card">
+          <div class="step">01 · Telusuri</div>
+          <div class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
+          <h3>Telusuri referensi vendor</h3>
+          <p>Cari vendor pada kategori yang relevan. Lihat cakupan layanan, struktur biaya, dan pengalaman BU lain sebagai bahan pertimbangan tim Anda.</p>
+        </div>
+        <div class="how-card">
+          <div class="step">02 · Bagikan</div>
+          <div class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7"/><path d="M12 15V3M8 7l4-4 4 4"/></svg></div>
+          <h3>Kontribusikan vendor BU Anda</h3>
+          <p>Pernah bekerja dengan vendor yang baik? Bagikan ke khazanah bersama agar BU lain punya lebih banyak opsi terinformasi — sama seperti Anda memanfaatkan kontribusi mereka.</p>
+        </div>
+        <div class="how-card">
+          <div class="step">03 · Putuskan sendiri</div>
+          <div class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <h3>Keputusan tetap di BU Anda</h3>
+          <p>Referensi memperkaya, tidak menentukan. Negosiasi, evaluasi, dan penetapan vendor sepenuhnya mengikuti kewenangan dan proses pengadaan BU Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="secthead">
+        <div class="kick">Kategori referensi</div>
+        <h2>Mulai dari kategori berikut</h2>
+        <p>Dua kategori awal sudah terisi. Masuk untuk melihat vendor, cakupan layanan, dan asal kontribusinya.</p>
+      </div>
+
+      <div class="svc-grid">
+        <!-- SECURITY -->
+        <article class="svc-card" data-go="security" role="button" tabindex="0">
+          <div class="svc-banner sec"></div>
+          <div class="svc-top">
+            <div class="svc-ico sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <span class="attrib ho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>Direferensikan HO</span>
+          </div>
+          <div class="svc-body">
+            <h3>Layanan Pengamanan</h3>
+            <div class="svc-tag">Jasa pengamanan terintegrasi · model manpower & teknologi</div>
+            <p>Referensi penyedia jasa pengamanan dengan paket per profil lokasi — pengelolaan personel, CMS, CCTV & access control, hingga manajemen risiko sosial. Materi dari SIGAP sebagai bahan pertimbangan.</p>
+          </div>
+          <div class="svc-meta">
+            <div><div class="mv">1</div><div class="ml">Vendor referensi</div></div>
+            <div><div class="mv">5</div><div class="ml">Segmen operasi</div></div>
+            <div><div class="mv">2</div><div class="ml">Model layanan</div></div>
+          </div>
+          <div class="svc-cta">Lihat referensi pengamanan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </article>
+
+        <!-- TRAVEL -->
+        <article class="svc-card" data-go="travel" role="button" tabindex="0">
+          <div class="svc-banner trv"></div>
+          <div class="svc-top">
+            <div class="svc-ico trv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l9-3 9 3"/><path d="M11 13V4a1.5 1.5 0 013 0v8"/><path d="M5 20h14"/></svg></div>
+            <span class="attrib used"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Digunakan Astra HO</span>
+          </div>
+          <div class="svc-body">
+            <h3>Layanan Travel Corporate</h3>
+            <div class="svc-tag">Travel management · perjalanan dinas</div>
+            <p>Referensi penyedia jasa perjalanan dinas yang pernah dievaluasi dan digunakan Astra International HO. Lengkap dengan kontak, term pembayaran, dan catatan penilaian QCDSM sebagai bahan banding.</p>
+          </div>
+          <div class="svc-meta">
+            <div><div class="mv">9</div><div class="ml">Vendor referensi</div></div>
+            <div><div class="mv">QCDSM</div><div class="ml">Catatan penilaian</div></div>
+            <div><div class="mv">2025</div><div class="ml">Periode evaluasi</div></div>
+          </div>
+          <div class="svc-cta">Lihat referensi travel
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </article>
+      </div>
+
+      <!-- CONTRIBUTE -->
+      <div class="contribute">
+        <div class="deco"></div>
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="ctext">
+          <h3>Punya vendor yang layak dibagikan?</h3>
+          <p>BU Anda mungkin punya rekanan yang bisa berguna untuk unit lain — vendor gedung, logistik, katering, IT, apa pun. Tambahkan ke khazanah bersama. Semakin banyak BU berkontribusi, semakin kaya referensi untuk seluruh Astra.</p>
+        </div>
+        <button class="cbtn" onclick="sendPrompt('Saya ingin berbagi referensi vendor yang pernah digunakan BU saya ke Procurement Hub. Bantu saya menyiapkan datanya.')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+          Bagikan referensi
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING -->
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="secthead" style="margin-bottom:0">
+        <div class="kick">Kategori menyusul</div>
+        <h2>Tumbuh seiring kontribusi BU</h2>
+        <p>Platform ini berkembang dari bawah. Kategori baru muncul saat BU mulai membagikan vendor di bidangnya — kerangka sama, isi dari komunitas pengadaan Astra.</p>
+      </div>
+      <div class="soon-grid">
+        <div class="soon"><div class="sh"><b>Building & Utility</b><span class="badge">Menanti kontribusi</span></div><p>Rekanan MEP, kebersihan, dan utilitas gedung.</p></div>
+        <div class="soon"><div class="sh"><b>Fleet & Logistic</b><span class="badge">Menanti kontribusi</span></div><p>Kendaraan operasional, kurir, logistik dokumen.</p></div>
+        <div class="soon"><div class="sh"><b>IT & Digital</b><span class="badge">Menanti kontribusi</span></div><p>Penyedia perangkat, software, dan layanan TI.</p></div>
+        <div class="soon"><div class="sh"><b>Hospitality & Event</b><span class="badge">Menanti kontribusi</span></div><p>Katering, MICE, pengelolaan ruang & acara.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================== SECURITY DETAIL ====================== -->
+<div class="view" id="view-security">
+
+  <!-- ============ LAYER 1: vendor selection ============ -->
+  <div id="sec-list">
+    <div class="detail-hero">
+      <div class="wrap">
+        <div class="crumb">
+          <button data-go="home">Beranda</button>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+          <span>Layanan Pengamanan</span>
+        </div>
+        <div class="dh-left" style="max-width:64ch">
+          <span class="vendor"><span class="vm">P</span>Kategori referensi · Pengamanan</span>
+          <h2>Referensi Layanan Pengamanan</h2>
+          <p>Kumpulan referensi penyedia jasa pengamanan untuk membantu Business Unit memperkaya pilihan. Pilih vendor di bawah untuk melihat profil, cakupan layanan, dan paketnya. Daftar ini akan bertambah seiring kontribusi BU lain.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="block">
+      <div class="wrap">
+        <!-- DYOR DISCLAIMER -->
+        <div class="disclaimer" style="margin-bottom:34px">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9l-8 14A2 2 0 004 21h16a2 2 0 001.7-3l-8-14a2 2 0 00-3.4 0z"/></svg></div>
+          <div>
+            <div class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>Disclaimer · Verifikasi Mandiri</div>
+            <h4>Vendor pada hub ini wajib diverifikasi sendiri oleh pengguna</h4>
+            <p>Informasi vendor di sini bersifat referensi dan disediakan untuk memperkaya pertimbangan. Pencantuman sebuah vendor <b>bukan</b> jaminan bahwa kualitas layanannya akan selalu sesuai harapan, dan bukan rekomendasi atau sertifikasi dari Astra. Kinerja vendor dapat berubah dari waktu ke waktu.</p>
+            <p>Sebelum menggunakan, setiap Business Unit bertanggung jawab melakukan <b>uji tuntas (due diligence) secara proper</b> — verifikasi legalitas dan rekam jejak, evaluasi kapabilitas terhadap kebutuhan spesifik, serta peninjauan dan evaluasi kinerja secara berkala. Singkatnya: <b>Do Your Own Research (DYOR)</b>; keputusan akhir sepenuhnya pada masing-masing BU.</p>
+            <div class="pts">
+              <span class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Verifikasi legalitas & rekam jejak</span>
+              <span class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Evaluasi terhadap kebutuhan spesifik</span>
+              <span class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Review & evaluasi kinerja berkala</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="secthead" style="margin-bottom:24px">
+          <div class="kick">Pilih vendor</div>
+          <h2>Vendor pengamanan tersedia</h2>
+          <p>Saat ini tersedia satu referensi vendor. Slot lain terbuka untuk penyedia pengamanan lain seiring berkembangnya platform.</p>
+        </div>
+
+        <div class="vendorpick">
+          <!-- SIGAP -->
+          <button class="vpick-card" data-vendor="sigap">
+            <div class="vp-banner"></div>
+            <div class="vpick-top">
+              <div class="vpick-logo logo-img"><img src="assets/sigap-logo.png" data-fallback="sigap" alt="SIGAP"></div>
+              <div class="vp-h">
+                <h3>SIGAP</h3>
+                <div class="vp-tag">Security as a Solution · Penyedia jasa pengamanan</div>
+              </div>
+            </div>
+            <div class="vpick-body">
+              <p>Penyedia solusi pengamanan terintegrasi dengan model manpower dan teknologi (CMS, CCTV, access control). Materi disajikan sebagai referensi cakupan dan paket per profil lokasi.</p>
+            </div>
+            <div class="vpick-tags">
+              <span>Manpower</span><span>CMS & Monitoring</span><span>CCTV & Access Control</span><span>5 Segmen lokasi</span>
+            </div>
+            <div class="vpick-meta">
+              <div><div class="mv">5</div><div class="ml">Segmen operasi</div></div>
+              <div><div class="mv">2</div><div class="ml">Model layanan</div></div>
+              <div><div class="mv">SLA</div><div class="ml">Komponen layanan</div></div>
+            </div>
+            <div class="vpick-cta">Lihat profil & layanan SIGAP
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </button>
+
+          <!-- future vendor slot -->
+          <div class="vpick-soon">
+            <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+            <b>Vendor pengamanan lain</b>
+            <p>Slot terbuka untuk penyedia jasa pengamanan lain yang direferensikan oleh BU Astra.</p>
+            <span class="badge">Menanti kontribusi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ LAYER 2: vendor detail (SIGAP) ============ -->
+  <div id="sec-detail" style="display:none">
+    <div class="detail-hero">
+      <div class="wrap">
+        <a class="backlink" id="sec-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Kembali ke daftar vendor pengamanan</a>
+        <div class="dh-row" style="margin-top:14px">
+          <div class="dh-left">
+            <span class="vendor"><span class="vm vm-img"><img src="assets/sigap-logo.png" data-fallback="sigap" alt="SIGAP"></span>SIGAP · Penyedia jasa pengamanan</span>
+            <h2>SIGAP — Security as a Solution</h2>
+            <p>Lima profil lokasi, dua model penyerahan pekerjaan. Materi paket berasal dari SIGAP sebagai bahan pertimbangan — bukan penetapan standar atau rekomendasi tunggal. Konfigurasi dan harga final mengikuti hasil assessment dan negosiasi masing-masing BU.</p>
+          </div>
+          <div class="dh-card">
+            <div class="ct">Kontak vendor</div>
+            <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/></svg><span>Gedung Koperasi Astra, Jl. Jend. Ahmad Yani No. 66, Cempaka Putih, Jakarta Pusat 10510</span></div>
+            <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.2a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/></svg><span><b>0811 9007 8296</b> · WhatsApp</span></div>
+            <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg><span><b>marketing@sigap.com</b></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="block">
+      <div class="wrap">
+        <!-- compact DYOR reminder on detail page -->
+        <div class="disclaimer" style="margin-bottom:30px">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9l-8 14A2 2 0 004 21h16a2 2 0 001.7-3l-8-14a2 2 0 00-3.4 0z"/></svg></div>
+          <div>
+            <div class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>Verifikasi mandiri (DYOR)</div>
+            <p style="margin-top:6px">Informasi di bawah bersifat referensi, bukan jaminan kualitas atau rekomendasi. Lakukan uji tuntas (due diligence) — verifikasi legalitas dan rekam jejak, serta evaluasi kinerja secara berkala — sebelum memutuskan. Keputusan akhir ada pada BU Anda.</p>
+          </div>
+        </div>
+
+        <div class="srcnote">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+          <div>
+            <h4>Sumber & sifat informasi</h4>
+            <p>Paket di bawah dirangkum dari materi presentasi SIGAP. SIGAP menjalankan layanannya dengan kerangka Astra Security Management System (ASMS); informasi ini disajikan sebagai referensi cakupan layanan, bukan klaim sertifikasi atau standar yang ditetapkan oleh platform. Treatment pengamanan (renpam) mengacu pada hasil Security Risk Assessment per lokasi.</p>
+          </div>
+        </div>
+
+        <div class="secthead" style="margin:38px 0 18px">
+          <div class="kick">Paket per segmen</div>
+          <h2>Pilihan layanan per profil lokasi</h2>
+          <p>Setiap segmen menawarkan dua model: Labour Supply (fokus personel) dan Job Supply (kombinasi personel + teknologi). Pilih segmen untuk membandingkan.</p>
+        </div>
+
+        <div class="seg-toolbar">
+          <span class="lbl">Filter segmen</span>
+          <button class="chip active" data-seg="all">Semua</button>
+          <button class="chip" data-seg="sales">Sales Operation</button>
+          <button class="chip" data-seg="manuf">Manufacturing</button>
+          <button class="chip" data-seg="fin">Financial Services</button>
+          <button class="chip" data-seg="office">Office Building</button>
+          <button class="chip" data-seg="land">Vacant Land</button>
+        </div>
+
+        <div id="seg-container"></div>
+
+        <div class="secthead" style="margin:46px 0 4px">
+          <div class="kick">Yang umumnya menyertai layanan</div>
+          <h2>Komponen SLA & cakupan operasional</h2>
+          <p>Sebagai gambaran, berikut komponen Service Level Agreement dan fitur pelaporan yang menjadi bagian dari layanan SIGAP. Detail final disepakati dalam kontrak per BU.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><h4>Komponen SLA</h4></div>
+            <div class="pb">
+              <div class="sla-item"><div class="num">1</div><div><div class="st">Administration</div><div class="sd">Invoice reguler & event, rekap absensi & lembur, penggajian plan vs actual.</div></div></div>
+              <div class="sla-item"><div class="num">2</div><div><div class="st">Identify Risk</div><div class="sd">Security Risk Assessment, Social Mapping, dan Security Plan per lokasi.</div></div></div>
+              <div class="sla-item"><div class="num">3</div><div><div class="st">Risk Treatment (Normal)</div><div class="sd">Pengelolaan People, System (Compliance ASMS), Device & Tech, dan External Relation.</div></div></div>
+              <div class="sla-item"><div class="num">4</div><div><div class="st">Issue & Conflict</div><div class="sd">Early Warning (unjuk rasa, situasi, bencana), Early Detection, mitigasi & penebalan.</div></div></div>
+              <div class="sla-item"><div class="num">5</div><div><div class="st">Resolution</div><div class="sd">Operational Report, Security Operational Index, Performance SLA, PICA & follow-up.</div></div></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h4>Fitur & cakupan operasional</h4></div>
+            <div class="pb">
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>Performance SLA & SOI</b> <span>— indeks kinerja operasional terukur.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>People Segmentation</b> <span>— pemetaan grading & kompetensi personel.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>Training & Development</b> <span>— peningkatan kapabilitas berkelanjutan.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>Readiness & Maintenance Devices</b> <span>— kesiapan & perawatan perangkat.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>ASMS Scope of BUJP</b> <span>— pemenuhan kepatuhan badan usaha jasa pengamanan.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>Incident & Complaint Handling</b> <span>— penanganan terdokumentasi.</span></div></div>
+              <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><div><b>Early Warning & Detection</b> <span>— deteksi dini berbasis social mapping.</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="procedure">
+          <div class="deco"></div>
+          <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+          <div class="ptext">
+            <h4>Tertarik menelusuri lebih lanjut?</h4>
+            <p>Gunakan informasi ini sebagai bahan pertimbangan internal. Untuk kebutuhan riil, mulai dari assessment lokasi BU Anda — hasilnya menentukan model, jumlah personel, dan konfigurasi. Hubungi vendor langsung atau koordinasikan via GA BU Anda.</p>
+          </div>
+          <button class="pbtn" onclick="sendPrompt('Bantu saya susun kerangka kebutuhan assessment pengamanan untuk salah satu lokasi BU Astra')">Susun kerangka assessment</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ====================== TRAVEL DETAIL ====================== -->
+<div class="view" id="view-travel">
+  <div class="detail-hero">
+    <div class="wrap">
+      <div class="crumb">
+        <button data-go="home">Beranda</button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+        <span>Layanan Travel Corporate</span>
+      </div>
+      <div class="dh-row">
+        <div class="dh-left">
+          <span class="vendor"><span class="vm">9</span>Referensi dari Astra International HO</span>
+          <h2>Referensi Vendor Travel Corporate</h2>
+          <p>Sembilan penyedia jasa perjalanan dinas yang pernah dievaluasi (QCDSM) dan digunakan Astra International HO pada periode 2025. Disajikan sebagai referensi untuk BU lain — bukan daftar wajib. Harga & ketentuan mengikuti perjanjian masing-masing.</p>
+        </div>
+        <div class="dh-card">
+          <div class="ct">Asal referensi</div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span>Evaluasi Travel Corporate · Astra International HO <b>2025</b></span></div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span>Dasar penilaian: QCDSM (Quality, Cost, Delivery, Safety, Morale)</span></div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg><span>Sifat: referensi antar BU, bukan penetapan vendor</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="travel-tools">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          <input type="text" id="travelSearch" placeholder="Cari vendor travel — nama atau alamat…" aria-label="Cari vendor travel">
+        </div>
+        <div class="sortsel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 12h12M9 18h6"/></svg>
+          9 vendor referensi
+        </div>
+      </div>
+
+      <div class="vtable">
+        <div class="vt-head">
+          <div>Vendor</div><div>Alamat</div><div>Telepon</div><div>Term Bayar</div><div>QCDSM</div>
+        </div>
+        <div id="travel-rows"></div>
+        <div class="vt-empty" id="travelEmpty">Tidak ada vendor yang cocok dengan pencarian Anda.</div>
+      </div>
+
+      <div class="legend">
+        <div class="lg-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Catatan QCDSM</div>
+        <div class="lg-i"><b>Quality</b> — relevansi & portofolio</div>
+        <div class="lg-i"><b>Cost</b> — transparansi & kompetitif harga</div>
+        <div class="lg-i"><b>Delivery</b> — ketepatan & respons</div>
+        <div class="lg-i"><b>Safety</b> — mitigasi risiko & kepatuhan</div>
+        <div class="lg-i"><b>Morale</b> — profesionalisme & proaktivitas</div>
+        <div class="lg-i" style="color:var(--accent);font-weight:700">Penilaian HO 2025: seluruh vendor skor 4/5</div>
+      </div>
+
+      <div class="procedure">
+        <div class="deco"></div>
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16l9-3 9 3"/><path d="M11 13V4a1.5 1.5 0 013 0v8"/><path d="M5 20h14"/></svg></div>
+        <div class="ptext">
+          <h4>Cara memanfaatkan referensi ini</h4>
+          <p>Skor QCDSM mencerminkan penilaian HO pada periode 2025 dan dapat berbeda untuk konteks BU Anda. Gunakan sebagai titik awal pembanding, lalu lakukan evaluasi sesuai kebutuhan dan kewenangan pengadaan BU Anda sendiri.</p>
+        </div>
+        <button class="pbtn" onclick="sendPrompt('Bantu saya bandingkan beberapa vendor travel corporate dari referensi ini untuk kebutuhan perjalanan dinas tim saya')">Bandingkan untuk kebutuhan saya</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="foot">
+  <svg class="swoosh" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M5 205 C 220 120, 470 55, 795 30 C 480 95, 235 150, 30 215 Z" fill="#ffffff"/>
+  </svg>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img class="logo" src="assets/astra-logo.png" data-fallback="astra" alt="Astra">
+        <p>Procurement Hub — platform pertukaran informasi pengadaan antar Business Unit, diinisiasi oleh Astra International Head Office. Dibangun untuk memperkaya referensi vendor lintas unit, bukan untuk menetapkan atau menstandarkan rekanan.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>Jelajahi</h5>
+          <button data-go="home">Beranda</button>
+          <button data-go="security">Pengamanan</button>
+          <button data-go="travel">Travel</button>
+        </div>
+        <div class="foot-col">
+          <h5>Berkontribusi</h5>
+          <button onclick="sendPrompt('Saya ingin berbagi referensi vendor yang pernah digunakan BU saya ke Procurement Hub. Bantu saya menyiapkan datanya.')">Bagikan vendor BU</button>
+          <button onclick="sendPrompt('Bagaimana tata cara dan kriteria untuk berkontribusi vendor ke Procurement Hub Astra?')">Tata cara kontribusi</button>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© PT Astra International Tbk · Internal Procurement Hub</span>
+      <span class="disc">Informasi vendor bersifat referensi dan dapat berubah. Inklusi vendor bukan rekomendasi, sertifikasi, atau jaminan dari Astra. Setiap BU bertanggung jawab atas proses pengadaan dan pemilihan vendornya sendiri.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
