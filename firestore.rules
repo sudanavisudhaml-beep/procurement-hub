@@ -1,0 +1,64 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===== Konstanta — HARUS sama dengan firebase-config.js =====
+    function adminEmail()  { return 'sudanavisudhaml@gmail.com'; }
+    function approvedDomainRegex() { return '.*@astra[.]co[.]id$'; }
+
+    function signedIn() { return request.auth != null; }
+    function myEmail()  { return request.auth.token.email; }
+    function myMember() { return get(/databases/$(database)/documents/members/$(request.auth.uid)).data; }
+    function amAdmin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(request.auth.uid))
+        && myMember().role == 'admin';
+    }
+    function amApproved() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(request.auth.uid))
+        && myMember().status == 'approved';
+    }
+    function verifiedApprovedDomain() {
+      return signedIn()
+        && request.auth.token.email_verified == true
+        && myEmail().matches(approvedDomainRegex());
+    }
+
+    // ===== members: 1 dokumen per user (id = uid) =====
+    match /members/{uid} {
+      // Baca: dokumen sendiri, atau admin baca semua
+      allow read: if signedIn() && (request.auth.uid == uid || amAdmin());
+
+      // Buat dokumen sendiri — status/role dikunci ketat
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.email == myEmail()
+        && request.resource.data.role == 'member'
+        && (
+             request.resource.data.status == 'pending'
+             || (request.resource.data.status == 'approved' && verifiedApprovedDomain())
+           );
+
+      // Bootstrap admin: hanya email admin yang boleh membuat dirinya admin
+      allow create: if signedIn() && request.auth.uid == uid
+        && myEmail() == adminEmail()
+        && request.resource.data.role == 'admin'
+        && request.resource.data.status == 'approved';
+
+      // Update profil sendiri (nama/BU) — TIDAK boleh ubah status/role sendiri
+      allow update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.status == resource.data.status
+        && request.resource.data.role == resource.data.role;
+
+      // Admin boleh approve/reject (ubah status/role) siapa pun
+      allow update, delete: if amAdmin();
+    }
+
+    // ===== vendors: data sensitif (dipakai nanti) =====
+    // Hanya anggota approved yang boleh baca; hanya admin yang boleh tulis.
+    match /vendors/{docId} {
+      allow read: if amApproved();
+      allow write: if amAdmin();
+    }
+  }
+}
