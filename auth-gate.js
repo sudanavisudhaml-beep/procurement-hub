@@ -10,14 +10,21 @@ import {
   signInWithPopup, GoogleAuthProvider, signOut, sendEmailVerification
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp,
-  collection, query, where, getDocs, orderBy
+  getFirestore, initializeFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp,
+  collection, query, where, getDocs
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 import { firebaseConfig, ADMIN_EMAIL, AUTO_APPROVE_DOMAINS } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
+// Force long-polling: jaringan korporat/proxy (Astra) sering memblokir
+// koneksi WebChannel default Firestore -> "client is offline".
+let db;
+try {
+  db = initializeFirestore(app, { experimentalForceLongPolling: true });
+} catch (e) {
+  db = getFirestore(app);
+}
 setPersistence(auth, browserLocalPersistence).catch(() => {});
 
 const $ = (id) => document.getElementById(id);
