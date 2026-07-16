@@ -23,3 +23,9 @@ export const ADMIN_EMAIL = "sudanavisudhaml@gmail.com";
    karena emailnya terverifikasi). Tambah domain BU di sini bila perlu.
    Harus SAMA dengan daftar di firestore.rules. */
 export const AUTO_APPROVE_DOMAINS = ["astra.co.id"];
+
+/* ====== DEMO MODE ======
+   true  = lewati gerbang login, Hub langsung tampil (untuk demo).
+   false = aktifkan lagi login + approval Firebase.
+   Gerbangnya tidak dihapus — tinggal ubah ke false untuk menghidupkan. */
+export const BYPASS_AUTH = true;

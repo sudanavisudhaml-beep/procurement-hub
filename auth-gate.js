@@ -13,7 +13,7 @@ import {
   getFirestore, initializeFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp,
   collection, query, where, getDocs
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-import { firebaseConfig, ADMIN_EMAIL, AUTO_APPROVE_DOMAINS } from "./firebase-config.js";
+import { firebaseConfig, ADMIN_EMAIL, AUTO_APPROVE_DOMAINS, BYPASS_AUTH } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -226,6 +226,13 @@ function wireForms() {
 
 /* ---------------- boot ---------------- */
 function boot() {
+  if (BYPASS_AUTH) {
+    // DEMO: buka gerbang, tampilkan Hub langsung tanpa login.
+    document.body.classList.remove("auth-locked");
+    const scr = document.getElementById("auth-screen");
+    if (scr) scr.style.display = "none";
+    return;
+  }
   wireForms();
   showAuthView("loading");
   onAuthStateChanged(auth, async (user) => {
